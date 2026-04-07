@@ -364,7 +364,21 @@ docker run \
 * 若不存在镜像，可自定构建：`docker build -t hub.local.example.com/apps/dify-sso:2026-04-07 .`
 
 * 对外暴漏的端口可以暴漏，也可以不暴漏，不暴漏确保dify nginx的配置中使用的是hostname访问，而非ip；
+
 * `--env-file`指定配置文件路径。
+
+* `--network`：指定网络，确保指定的网络是数据库容器所在网络，相关命令如下：
+
+  ```
+  # 1、列出所有网络
+  docker network ls
+  
+  # 2、检查某个网络（可看到对应容器）
+  docker network inspect docker_default
+  ```
+
+* Dify内网镜像地址为`hub.local.example.com/apps/dify-sso:2026-04-07`，外网镜像地址为`crpi-wgxdim2jei2zq776.cn-`
+
 * Dify内网镜像地址为`hub.local.example.com/apps/dify-sso:2026-04-07`，外网镜像地址为`crpi-wgxdim2jei2zq776.cn-hangzhou.personal.cr.aliyuncs.com/dify/dify-sso:2026-04-07`，镜像均支持amd64和amr64架构。
 
 
