@@ -151,11 +151,7 @@ class OIDCService:
                     logger.info("用户 %s 不属于当前租户，创建关联: 角色 %s", user_email, user_role)
                     tenant_account_join = TenantAccountJoin.create(self.tenant_id, account.id, user_role)
                 else:
-                    # 更新角色（如果有变化）
-                    if tenant_account_join.role != user_role:
-                        logger.info("用户角色更新: %s (%s -> %s)", user_email, tenant_account_join.role, user_role)
-                        tenant_account_join.role = user_role
-                        db.session.add(tenant_account_join)
+                    logger.debug("用户 %s 已在当前租户中，不覆盖现有角色配置", user_email)
 
             # 更新用户登录信息
             account.last_login_at = naive_utc_now()
