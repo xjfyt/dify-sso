@@ -152,6 +152,7 @@ class OIDCService:
                     tenant_account_join = TenantAccountJoin.create(self.tenant_id, account.id, user_role)
                 else:
                     logger.debug("用户 %s 已在当前租户中，不覆盖现有角色配置", user_email)
+                    user_role = tenant_account_join.role
 
             # 更新用户登录信息
             account.last_login_at = naive_utc_now()
