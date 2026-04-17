@@ -1,6 +1,6 @@
 services:
   dify-sso:
-    image: hub.local.example.com/apps/dify-sso:2026-04-07
+    image: ghcr.io/xjfyt/dify-sso:latest
     container_name: dify-sso
     restart: always
     environment:

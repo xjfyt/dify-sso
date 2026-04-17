@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: dify-sso
   labels:
-    app.kubernetes.io/name: hub.local.example.com/apps/dify-sso:2026-04-07
+    app.kubernetes.io/name: ghcr.io/xjfyt/dify-sso:latest
 data:
   # 服务配置
   CONSOLE_WEB_URL: 'https://test-dify.test.com'

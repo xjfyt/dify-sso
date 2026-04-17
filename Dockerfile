@@ -1,5 +1,5 @@
 # ---- 运行环境 ----
-FROM hub.local.example.com/base/python:3.11-alpine AS running
+FROM python:3.11-alpine AS running
 
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
