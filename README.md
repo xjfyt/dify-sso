@@ -39,7 +39,7 @@ mv .env.example .env
 
 ```bash
 # 服务配置
-CONSOLE_WEB_URL=https://dify.local.example.com
+CONSOLE_WEB_URL=https://dify.example.com
 SECRET_KEY=sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
 TENANT_ID=47f8b62e-5041-4f16-a728-5064d48d6536
 EDITION=SELF_HOSTED
@@ -54,8 +54,8 @@ ACCOUNT_REFRESH_TOKEN_PREFIX=account_refresh_token:
 # OIDC配置
 OIDC_CLIENT_ID=798189a637c07e07260f
 OIDC_CLIENT_SECRET=413dfa65cee3ebf2eb9d3a3f841a325705ae2394
-OIDC_DISCOVERY_URL=https://auth.local.example.com/.well-known/openid-configuration
-OIDC_REDIRECT_URI=https://dify.local.example.com/console/api/enterprise/sso/oidc/callback
+OIDC_DISCOVERY_URL=https://auth.example.com/.well-known/openid-configuration
+OIDC_REDIRECT_URI=https://dify.example.com/console/api/enterprise/sso/oidc/callback
 OIDC_SCOPE=openid profile email roles
 OIDC_RESPONSE_TYPE=code
 
@@ -79,7 +79,7 @@ REDIS_PASSWORD=difyai123456
 ### 2、服务配置
 
 ```bash
-CONSOLE_WEB_URL=https://dify.local.example.com
+CONSOLE_WEB_URL=https://dify.example.com
 SECRET_KEY=sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
 TENANT_ID=47f8b62e-5041-4f16-a728-5064d48d6536
 EDITION=SELF_HOSTED
@@ -137,8 +137,8 @@ ACCOUNT_DEFAULT_ROLE=normal
 ```bash
 OIDC_CLIENT_ID=798189a637c07e07260f
 OIDC_CLIENT_SECRET=413dfa65cee3ebf2eb9d3a3f841a325705ae2394
-OIDC_DISCOVERY_URL=https://auth.local.example.com/.well-known/openid-configuration
-OIDC_REDIRECT_URI=https://dify.local.example.com/console/api/enterprise/sso/oidc/callback
+OIDC_DISCOVERY_URL=https://auth.example.com/.well-known/openid-configuration
+OIDC_REDIRECT_URI=https://dify.example.com/console/api/enterprise/sso/oidc/callback
 OIDC_SCOPE=openid profile email roles
 OIDC_RESPONSE_TYPE=code
 ```
@@ -377,9 +377,7 @@ docker run \
   docker network inspect docker_default
   ```
 
-* Dify内网镜像地址为`ghcr.io/xjfyt/dify-sso:latest`，外网镜像地址为`crpi-wgxdim2jei2zq776.cn-`
-
-* Dify内网镜像地址为`ghcr.io/xjfyt/dify-sso:latest`，外网镜像地址为`crpi-wgxdim2jei2zq776.cn-hangzhou.personal.cr.aliyuncs.com/dify/dify-sso:2026-04-09`，镜像均支持amd64和amr64架构。
+* 镜像地址为`ghcr.io/xjfyt/dify-sso:latest`，支持amd64和arm64架构。
 
 
 
